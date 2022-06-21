@@ -20,6 +20,7 @@ public class FormAddStudent extends JFrame {
     private JCheckBox check2;
     private ButtonGroup groupB;
     private JTable jtableData;
+    private JButton btn_update;
 
     public FormAddStudent(){
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -139,6 +140,9 @@ public class FormAddStudent extends JFrame {
         getContentPane().add(pane);
         pane.setBounds(550,100,450,250);
 
+        btn_update = new JButton("Modifier");
+        getContentPane().add(btn_update);
+        btn_update.setBounds(650,370,150,40);
         new StudentManager().selectAllStudents(jtableData);
 
     }
