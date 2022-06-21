@@ -21,6 +21,7 @@ public class FormAddStudent extends JFrame {
     private ButtonGroup groupB;
     private JTable jtableData;
     private JButton btn_update;
+    private JButton btn_remove;
 
     public FormAddStudent(){
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -143,6 +144,11 @@ public class FormAddStudent extends JFrame {
         btn_update = new JButton("Modifier");
         getContentPane().add(btn_update);
         btn_update.setBounds(650,370,150,40);
+
+        btn_remove = new JButton("Suprimer");
+        getContentPane().add(btn_remove);
+        btn_remove.setBounds(850,370,150,40);
+
         new StudentManager().selectAllStudents(jtableData);
 
     }
